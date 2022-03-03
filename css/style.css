@@ -142,8 +142,8 @@ header {
 .catalogo {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    padding-top: 130px;
-    padding-bottom: 130px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .catalogo__items{
@@ -232,29 +232,37 @@ textarea{
 
 
 @media (max-width:800px){
-    header {
+    .container__tools {
+        display: grid;
         grid-template-columns: auto auto;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: "container__tools container__tools"
+        grid-template-rows: repeat(2, 70% 30%);
+        grid-template-areas: "container__img container__carrito"
                              "container__buscador container__buscador"
                              "navbar navbar";
     }
+
+    .container__img{
+        width: 70%;
+    }
+
     .container__cuenta{
-        width: 30px;
-        gap: 1rem;
+        width: 50px;
+        gap: 2rem;
+    }
+
+    .conteiner__buscador{
+        display: flex;
+        align-items: center;
     }
     .barra__buscadora{
-        width: 250px;
-        height: 35px;
+        width: 90%;
     }
 
     .barra__buscadora--btn{
-        padding: 7px 5px;
+        padding: 12px 5px;
     }
     
-    .container__img{
-        width: 250px;
-    }
+
     .navegacion__productos{
         display: flex;
         flex-direction: column;
@@ -281,31 +289,58 @@ textarea{
 
 @media (max-width:500px){
 
-    header{
+    .container__tools {
+        display: grid;
         grid-template-columns: auto auto;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: "container__tools container__tools"
+        grid-template-rows: repeat(2, 70% 30%);
+        grid-template-areas: "container__img container__carrito"
                              "container__buscador container__buscador"
                              "navbar navbar";
     }
     .container__img{
-        width: 200px;   
+        width: 70%;   
     }
-    
+
+    .container__cuenta{
+        width: 40px;
+        gap: 1rem;
+    }
+
     .barra__buscadora{
-        width: 150px;
+        width: 80%;
+    }
+
+    .catalogo{
+        grid-template-columns: auto;
     }
     
     .btn__form{
-        padding: 40px 50px;
+        padding: 10px 40px;
         font-size: 16px;
     }
-}
 
-/* .contenedor__header-sm {
-    grid-template-columns: 69.5% 29%;
-    grid-template-areas: "logo carrito"
-                         "barra barra";
-    justify-content: center;
-    padding-left: 10px;
-} */
+    .contenedor__formulario{
+        display: inline-block;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .formulario input[type=text]{
+        width: 350px;
+
+    }
+    .formulario input[type=email]{
+        width: 350px;
+
+    }
+
+    .formulario input[type=number]{
+        width: 350px;
+    }
+
+    textarea{
+        width: 350px
+    }
+
+}
